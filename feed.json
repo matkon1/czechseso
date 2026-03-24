@@ -1,0 +1,13 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "czechseso",
+    "description": "",
+    "home_page_url": "https://matkon1.github.io/czechseso",
+    "feed_url": "https://matkon1.github.io/czechseso/feed.json",
+    "user_comment": "",
+    "author": {
+        "name": "Matěj Konečný"
+    },
+    "items": [
+    ]
+}

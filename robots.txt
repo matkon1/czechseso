@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://matkon1.github.io/czechseso/sitemap.xml
