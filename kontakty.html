@@ -140,25 +140,8 @@ document.addEventListener('click', function(event) {
 
 /* 3. VERZE PRO MOBIL (Svislé) */
 @media (max-width: 768px) {
-  .faq-item {
-    transform: translateX(calc(100% - 35px)); 
-  }
+    .faq-sticky-container {
+        display: none !important; /* Na mobilu se celý tenhle blok vypne */
+    }
 
-  .faq-item.active {
-    transform: translateX(0) !important;
-  }
-
-  .faq-trigger {
-    min-width: 35px;
-    padding: 10px 4px;
-    font-size: 11px;
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    transform: rotate(180deg);
-    border-radius: 0 12px 12px 0 !important;
-  }
-  
-  .faq-body {
-    width: 180px; /* Na mobilu ještě o kousek užší */
-  }
 }</style></body></html>
