@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="cs"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Error 404 - czechseso</title><meta name="robots" content="noindex, follow"><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="alternate" type="application/atom+xml" href="https://matkon1.github.io/czechseso/feed.xml" title="czechseso - RSS"><link rel="alternate" type="application/json" href="https://matkon1.github.io/czechseso/feed.json" title="czechseso - JSON"><meta property="og:title" content="czechseso"><meta property="og:image" content="https://matkon1.github.io/czechseso/media/website/fousek-logotyp.png"><meta property="og:image:width" content="619"><meta property="og:image:height" content="403"><meta property="og:site_name" content="czechseso"><meta property="og:description" content=""><meta property="og:url" content="https://matkon1.github.io/czechseso/"><meta property="og:type" content="website"><link rel="stylesheet" href="https://matkon1.github.io/czechseso/assets/css/style.css?v=438193457b99f2898fdf2dc3d790034b"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Organization","name":"czechseso","logo":"https://matkon1.github.io/czechseso/media/website/fousek-logotyp.png","url":"https://matkon1.github.io/czechseso/"}</script><noscript><style>img[loading] {
+<!DOCTYPE html><html lang="cs"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Error 404 - czechseso</title><meta name="robots" content="noindex, follow"><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="alternate" type="application/atom+xml" href="https://matkon1.github.io/czechseso/feed.xml" title="czechseso - RSS"><link rel="alternate" type="application/json" href="https://matkon1.github.io/czechseso/feed.json" title="czechseso - JSON"><meta property="og:title" content="czechseso"><meta property="og:image" content="https://matkon1.github.io/czechseso/media/website/fousek-logotyp.png"><meta property="og:image:width" content="619"><meta property="og:image:height" content="403"><meta property="og:site_name" content="czechseso"><meta property="og:description" content=""><meta property="og:url" content="https://matkon1.github.io/czechseso/"><meta property="og:type" content="website"><link rel="stylesheet" href="https://matkon1.github.io/czechseso/assets/css/style.css?v=931afa48ea02f99c62c0a07e3e5635cc"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Organization","name":"czechseso","logo":"https://matkon1.github.io/czechseso/media/website/fousek-logotyp.png","url":"https://matkon1.github.io/czechseso/"}</script><noscript><style>img[loading] {
                     opacity: 1;
                 }</style></noscript><style>@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 
@@ -32,7 +32,32 @@
                     this.classList.add('is-loaded');
                 }, false);
             }
-        }</script><div class="faq-sticky-container"><div class="faq-item"><div class="faq-trigger">📌 START</div><div class="faq-body"><strong>Jak začít?</strong><p>Vyber si hru, vytiskni materiály a vyraz do terénu! Vše přijde do mailu.</p></div></div><div class="faq-item"><div class="faq-trigger">📌CO S SEBOU</div><div class="faq-body"><strong>Co s sebou?</strong><p>Stačí ti nabitý mobil, materiály, tužka, nůžky a dobrá nálada!</p></div></div><div class="faq-item"><div class="faq-trigger">📌 MUSÍM VEN?</div><div class="faq-body"><strong>Jsou všechny hry venkovní?</strong><p>Nejsou! Některé hry můžeš hrát z domova! Najdeš u nich ikonku 🏠.</p></div></div></div><style>.faq-sticky-container {
+        }</script><div class="faq-sticky-container"><div class="faq-item"><div class="faq-trigger">📌 START</div><div class="faq-body"><strong>Jak začít?</strong><p>Vyber si hru, vytiskni materiály a vyraz do terénu! Vše přijde do mailu.</p></div></div><div class="faq-item"><div class="faq-trigger">📌CO S SEBOU</div><div class="faq-body"><strong>Co s sebou?</strong><p>Stačí ti nabitý mobil, materiály, tužka, nůžky a dobrá nálada!</p></div></div><div class="faq-item"><div class="faq-trigger">📌 MUSÍM VEN?</div><div class="faq-body"><strong>Jsou všechny hry venkovní?</strong><p>Nejsou! Některé hry můžeš hrát z domova! Najdeš u nich ikonku 🏠.</p></div></div></div><script>function toggleFaq(element) {
+  // Jen pro dotyková zařízení (mobily)
+  if (window.innerWidth <= 768) {
+    // Pokud je už otevřené, zavři ho
+    if (element.classList.contains('active')) {
+      element.classList.remove('active');
+    } else {
+      // Zavři všechna ostatní otevřená
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+      });
+      // Otevři tohle
+      element.classList.add('active');
+    }
+  }
+}
+
+// Zavření při kliknutí kamkoliv jinam na stránku
+document.addEventListener('click', function(event) {
+  if (!event.target.closest('.faq-item') && window.innerWidth <= 768) {
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.classList.remove('active');
+    });
+  }
+});</script><style>/* 1. ZÁKLADNÍ NASTAVENÍ (SPOLEČNÉ) */
+.faq-sticky-container {
   position: fixed;
   right: 0;
   top: 25%;
@@ -40,80 +65,100 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 12px;
+  gap: 8px; /* Menší mezery mezi záložkami */
 }
 
 .faq-item {
   display: flex;
-  flex-direction: row; /* FAQ štítek je vlevo od obsahu */
-  align-items: stretch;
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  /* Schováme obsah (cca 280px), necháme koukat jen štítek FAQ */
-  transform: translateX(calc(100% - 85px)); 
+  flex-direction: row;
+  transition: transform 0.3s ease-out;
 }
 
-/* Při najetí vyjede celý obsah */
-.faq-item:hover {
-  transform: translateX(0);
-}
-
-/* Ten viditelný štítek "FAQ" */
 .faq-trigger {
   background: #fef4a9;
   color: #1a1a1a;
-  padding: 10px 15px;
-  border: 3px solid #1a1a1a;
+  border: 2px solid #1a1a1a; /* Trochu tenčí fixa pro menší objekt */
   border-right: none;
   font-family: 'Gloria Hallelujah', cursive !important;
   font-weight: bold;
-  cursor: help;
-  min-width: 85px;
-  text-align: center;
-  border-radius: 15px 0 0 15px;
-  box-shadow: -3px 3px 0px rgba(0,0,0,0.2);
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-    /* MAGIE OTOČENÍ: */
-  writing-mode: vertical-rl; 
-  text-orientation: mixed;
-  transform: rotate(180deg); /* Aby text "rostl" zdola nahoru nebo shora dolů podle chuti */
-  
-  min-width: 45px;
-  text-align: center;
-  border-radius: 0 10px 10px 0; /* Otočíme zaoblení, protože label je teď "vzhůru nohama" */
-  box-shadow: 3px 3px 0px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
+  box-shadow: -2px 2px 0px rgba(0,0,0,0.2);
+  border-radius: 12px 0 0 12px !important;
 }
 
-/* Obsah (otázka a odpověď), který je schovaný vpravo mimo obrazovku */
 .faq-body {
   background: #fffbe6;
-  border-top: 3px solid #1a1a1a;
-  border-bottom: 3px solid #1a1a1a;
-  border-left: 1px dashed #1a1a1a; /* Oddělovač mezi FAQ a textem */
-  padding: 12px 20px;
-  width: 280px;
-  box-shadow: -3px 3px 0px rgba(0,0,0,0.1);
+  border: 2px solid #1a1a1a;
+  border-right: none;
+  padding: 8px 12px; /* Hodně nahuštěný text */
+  width: 200px; /* Znatelně užší tělo */
+  box-shadow: -2px 2px 0px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-radius: 0 !important;
 }
 
 .faq-body strong {
   display: block;
   font-family: 'Gloria Hallelujah', cursive !important;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
   text-decoration: underline;
+  font-size: 0.9rem; /* Menší nadpis */
+  line-height: 1.1;
 }
 
 .faq-body p {
   margin: 0;
   font-family: 'Gloria Hallelujah', cursive !important;
   color: #1a1a1a;
-  font-size: 0.9rem;
-  line-height: 1.3;
+  font-size: 0.8rem; /* Menší text odpovědi */
+  line-height: 1.1; /* Text nahuštěný na sebe */
+}
+
+/* 2. VERZE PRO POČÍTAČ (PC) */
+@media (min-width: 769px) {
+  .faq-item {
+    /* Schováme tělo (200px) */
+    transform: translateX(200px); 
+  }
+  
+  .faq-item:hover {
+    transform: translateX(0);
+  }
+
+  .faq-trigger {
+    min-width: 80px; /* Užší štítek na webu */
+    padding: 6px 12px;
+    font-size: 13px; /* Drobnější písmo */
+    writing-mode: horizontal-tb;
+  }
+}
+
+/* 3. VERZE PRO MOBIL (Svislé) */
+@media (max-width: 768px) {
+  .faq-item {
+    transform: translateX(calc(100% - 35px)); 
+  }
+
+  .faq-item.active {
+    transform: translateX(0) !important;
+  }
+
+  .faq-trigger {
+    min-width: 35px;
+    padding: 10px 4px;
+    font-size: 11px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    border-radius: 0 12px 12px 0 !important;
+  }
+  
+  .faq-body {
+    width: 180px; /* Na mobilu ještě o kousek užší */
+  }
 }</style></body></html>
