@@ -196,4 +196,53 @@ if (localStorage.getItem('cookiesAccepted') === 'true') {
         padding: 15px;
         bottom: 0;
     }
-}</style></body></html>
+}</style><script>document.addEventListener('click', function(event) {
+    // Kontrola, jestli uživatel klikl na naše tlačítko
+    if (event.target && event.target.id === 'vstupSubmitBtn') {
+        runVstupLogic();
+    }
+});
+
+// Aby to fungovalo i při stisknutí ENTER v políčku
+document.addEventListener('keypress', function(event) {
+    if (event.key === 'Enter' && document.activeElement.id === 'gamePassword') {
+        event.preventDefault();
+        runVstupLogic();
+    }
+});
+
+function runVstupLogic() {
+    var passwordInput = document.getElementById("gamePassword");
+    var errorMsg = document.getElementById("errorMessage");
+    if (!passwordInput) return;
+
+    var password = passwordInput.value.trim().toUpperCase();
+    
+    var passwordMapping = {
+        "PK4L": "https://sites.google.com/view/czechseso-pk4l",
+        "IL96": "https://sites.google.com/view/rukopis-shakespeare-hra-klpi",
+        "D88P": "https://sites.google.com/view/sifrovaciadventnikalendar",
+        "DF485T": "https://sites.google.com/view/df485t",
+        "454SHG1": "https://sites.google.com/view/spolekryavc",
+        "U88DG7": "https://sites.google.com/view/posledklapka/",
+        "DIGF8C82": "https://sites.google.com/view/tkzpyramidy5458225",
+        "H5L23": "https://sites.google.com/view/dotekledovhoducha",
+        "IUG654JK": "https://sites.google.com/view/kola-ar-a-zhad"
+    };
+
+    var targetUrl = "";
+    for (var key in passwordMapping) {
+        if (password.includes(key)) {
+            targetUrl = passwordMapping[key];
+            break;
+        }
+    }
+
+    if (targetUrl !== "") {
+        if (errorMsg) errorMsg.style.display = "none";
+        // Totální přesměrování
+        window.location.assign(targetUrl);
+    } else {
+        if (errorMsg) errorMsg.style.display = "block";
+    }
+}</script></body></html>
