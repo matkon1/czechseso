@@ -3,12 +3,55 @@
     <title>czechseso</title>
     <link href="https://matkon1.github.io/czechseso/feed.xml" rel="self" />
     <link href="https://matkon1.github.io/czechseso" />
-    <updated>2026-03-30T22:35:32+02:00</updated>
+    <updated>2026-03-30T22:55:39+02:00</updated>
     <author>
         <name>Matěj Konečný</name>
     </author>
     <id>https://matkon1.github.io/czechseso</id>
 
+    <entry>
+        <title>Text na kalkulačce</title>
+        <author>
+            <name>Matěj Konečný</name>
+        </author>
+        <link href="https://matkon1.github.io/czechseso/text-na-kalkulacce.html"/>
+        <id>https://matkon1.github.io/czechseso/text-na-kalkulacce.html</id>
+            <category term="Blog"/>
+
+        <updated>2026-03-30T22:55:39+02:00</updated>
+            <summary type="html">
+                <![CDATA[
+                    Kalkulačka přeci text neumí! Nebo ano? Napadlo tě někdy kalkulačku otočit vzhůru nohama? Na obrázku vidíš zašifrované slovo "hello", tedy anglicky AHOJ. Do číselné kombinace jej můžeme převést jako 0,1134. Pokud tedy máš k dispozici kalkulačku, pusť se do šifrování pomocí ní! TIP! Postup funguje&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <div class="oKdM2c ZZyype">
+<div id="h.300a68aab32a95a5_432" class="hJDwNd-AhqUyc-Clt0zb Ft7HRd-AhqUyc-Clt0zb jXK9ad D2fZ2 zu5uec">
+<div class="jXK9ad-SmKAyb">
+<div class="tyJCtd mGzaTb Depvyb baZpAe">
+<p class="zfr3Q CDt4Ke " dir="ltr"><span class="C9DxTc ">Kalkulačka přeci text neumí! Nebo ano? Napadlo tě někdy kalkulačku otočit vzhůru nohama?</span></p>
+<p class="zfr3Q CDt4Ke " dir="ltr"><span class="C9DxTc ">Na obrázku vidíš zašifrované slovo "hello", tedy anglicky AHOJ. Do číselné kombinace jej můžeme převést jako 0,1134.</span></p>
+<p class="zfr3Q CDt4Ke " dir="ltr"><span class="C9DxTc ">Pokud tedy máš k dispozici kalkulačku, pusť se do šifrování pomocí ní!</span></p>
+<p class="zfr3Q CDt4Ke " dir="ltr"><span class="C9DxTc ">TIP!</span></p>
+<p class="zfr3Q CDt4Ke " dir="ltr"><span class="C9DxTc ">Postup funguje i obráceně a zadáním slova mohou hráči získat číselný kód!</span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="oKdM2c ZZyype">
+<div id="h.300a68aab32a95a5_458" class="hJDwNd-AhqUyc-Clt0zb Ft7HRd-AhqUyc-Clt0zb jXK9ad D2fZ2 zu5uec">
+<div class="jXK9ad-SmKAyb">
+<div class="tyJCtd mGzaTb Depvyb baZpAe">
+<p class="zfr3Q CDt4Ke " dir="ltr"><span class="C9DxTc ">Chceš udělat doma skvělou únikovku? Stáhni si balík předpřipravených materiálů ↓</span></p>
+<p dir="ltr"><a href="https://sites.google.com/d/11Z8oa7DDyI6nx-O1_IFT2pb5E7k8Hw80/p/1CDQrMXy-ZUItBhU6SVShFi2GTaUwrPNF/edit">MATERIÁLY PRO ÚNIKOVKU TADY!</a></p>
+</div>
+</div>
+</div>
+</div>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Jak udělat únikovou hru? </title>
         <author>
